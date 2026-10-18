@@ -3,6 +3,16 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+plt.rcParams.update({
+    "figure.facecolor": "#ffffff", "axes.facecolor": "#ffffff",
+    "axes.edgecolor": "#dcebe1", "axes.labelcolor": "#557064",
+    "xtick.color": "#557064", "ytick.color": "#557064",
+    "text.color": "#10251c", "axes.titleweight": "bold",
+    "axes.titlecolor": "#073b2b",
+    "axes.prop_cycle": plt.cycler(color=["#16865b", "#79c9a2", "#0a6847", "#baf4d4", "#3c9a72"]),
+    "grid.color": "#e6f0e9",
+})
+
 
 # ============================================================
 # PAGE CONFIG
@@ -21,18 +31,34 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-
-.main-title {
-    font-size: 42px;
-    font-weight: 800;
-}
-
-.subtitle {
-    font-size: 18px;
-    opacity: 0.75;
-    margin-bottom: 25px;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root { --forest:#073b2b; --green:#16865b; --mint:#baf4d4; --ink:#10251c; }
+html, body, [class*="css"] { font-family:'DM Sans',sans-serif; }
+.stApp { background:radial-gradient(ellipse at 12% 0%,rgba(22,134,91,.13),transparent 34%),linear-gradient(180deg,#f8fcf9 0%,#f2f8f4 100%); color:var(--ink); }
+[data-testid="stHeader"] { background:rgba(248,252,249,.82); }
+.block-container { max-width:1500px; padding-top:2rem; padding-bottom:3rem; }
+.main-title { font-family:'Manrope',sans-serif; font-size:clamp(2.1rem,4vw,3.5rem); font-weight:800; line-height:1.08; letter-spacing:-.055em; color:#fff; margin:0; }
+.subtitle { font-size:1.02rem; line-height:1.7; color:rgba(255,255,255,.78); margin-top:.8rem; margin-bottom:0; max-width:680px; }
+.hero-shell { position:relative; overflow:hidden; border-radius:28px; padding:clamp(1.7rem,4vw,3.3rem); margin:0 0 1.8rem; color:#fff; background:radial-gradient(circle at 82% 18%,rgba(186,244,212,.22),transparent 22%),radial-gradient(circle at 100% 100%,rgba(22,134,91,.42),transparent 35%),linear-gradient(125deg,#041f18 0%,#073b2b 55%,#0b6244 100%); border:1px solid rgba(255,255,255,.13); box-shadow:0 22px 55px rgba(7,59,43,.17); }
+.hero-shell:after { content:""; position:absolute; width:250px; height:250px; right:-75px; bottom:-135px; border:1px solid rgba(186,244,212,.25); border-radius:50%; box-shadow:0 0 0 25px rgba(186,244,212,.035),0 0 0 55px rgba(186,244,212,.025); }
+.hero-kicker { display:inline-flex; align-items:center; gap:.55rem; border:1px solid rgba(186,244,212,.28); background:rgba(186,244,212,.09); color:#baf4d4; padding:.42rem .78rem; border-radius:999px; font-size:.72rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:1.15rem; }
+.hero-dot { width:7px; height:7px; border-radius:50%; background:#86efac; box-shadow:0 0 12px #86efac; }
+.hero-footnote { color:rgba(255,255,255,.62); font-size:.82rem; margin-top:1.35rem; letter-spacing:.02em; }
+[data-testid="stSidebar"] { background:linear-gradient(180deg,#062d21 0%,#041f18 100%); border-right:1px solid rgba(255,255,255,.08); }
+[data-testid="stSidebar"] * { color:#edf9f1; }
+[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] { background:rgba(255,255,255,.07); border:1px dashed rgba(186,244,212,.45); border-radius:16px; }
+[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] button { background:#baf4d4; color:#073b2b; border:0; }
+div[data-testid="stMetric"] { background:rgba(255,255,255,.9); border:1px solid #dcebe1; border-radius:18px; padding:1rem 1.15rem; box-shadow:0 8px 22px rgba(16,37,28,.035); }
+div[data-testid="stMetricLabel"] { color:#557064; font-weight:600; } div[data-testid="stMetricValue"] { color:#073b2b; font-family:'Manrope',sans-serif; font-weight:800; }
+[data-testid="stTabs"] [role="tablist"] { gap:.35rem; background:#e8f2eb; padding:.38rem; border-radius:16px; }
+[data-testid="stTabs"] button[role="tab"] { border-radius:11px; color:#486356; font-weight:700; padding:.65rem 1rem; }
+[data-testid="stTabs"] button[role="tab"][aria-selected="true"] { background:#fff; color:#075638; box-shadow:0 3px 10px rgba(7,59,43,.08); }
+.stButton>button,.stDownloadButton>button { border-radius:12px; border:1px solid #16865b; background:#0a6847; color:white; font-weight:700; transition:transform .18s ease,box-shadow .18s ease; }
+.stButton>button:hover,.stDownloadButton>button:hover { background:#084f38; border-color:#084f38; color:white; transform:translateY(-1px); box-shadow:0 8px 18px rgba(10,104,71,.18); }
+[data-testid="stDataFrame"],[data-testid="stTable"] { border:1px solid #dcebe1; border-radius:14px; overflow:hidden; }
+hr { border-color:#dcebe1; } h1,h2,h3 { font-family:'Manrope',sans-serif!important; color:#0a3c2b; letter-spacing:-.025em; }
+.stAlert { border-radius:14px; } footer { visibility:hidden; }
+@media(max-width:768px) { .block-container{padding-top:1rem}.hero-shell{border-radius:20px;padding:1.4rem}[data-testid="stTabs"] [role="tablist"]{flex-wrap:wrap} }
 </style>
 """, unsafe_allow_html=True)
 
@@ -229,16 +255,14 @@ def calculate_risk(row, attendance_column):
 # ============================================================
 
 st.markdown(
-    '<div class="main-title">'
-    '🎓 Student Performance Analyzer'
-    '</div>',
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    '<div class="subtitle">'
-    'Upload any student CSV and automatically analyze performance.'
-    '</div>',
+    """
+    <section class="hero-shell">
+      <div class="hero-kicker"><span class="hero-dot"></span> Academic intelligence platform</div>
+      <div class="main-title">Student Performance<br>Analyzer<span style="color:#baf4d4">.</span></div>
+      <div class="subtitle">Turn student data into a clearer picture of achievement, attendance, and academic risk — all in one focused workspace.</div>
+      <div class="hero-footnote">DATA-DRIVEN INSIGHTS&nbsp;&nbsp; / &nbsp;&nbsp; SMARTER ACADEMIC DECISIONS</div>
+    </section>
+    """,
     unsafe_allow_html=True
 )
 
