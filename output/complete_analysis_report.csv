@@ -1,0 +1,36 @@
+Student_ID,Name,Math,Programming,Database,DSA,Attendance (%),Total Marks,Average,Grade,Status,Performance,Risk
+STU001,Mohammad Ahmed,90,62,51,92,78,295,73.75,C,Pass,Good,Low Risk
+STU002,Ayesha Khan,65,69,58,92,73,284,71.0,C,Pass,Good,At Risk
+STU003,Zainab Fatima,93,89,55,82,83,319,79.75,C,Pass,Good,Low Risk
+STU004,Bilal Siddiqui,52,56,55,58,77,221,55.25,F,Pass,Needs Improvement,At Risk
+STU005,Khadija Omar,82,93,51,80,76,306,76.5,C,Pass,Good,Low Risk
+STU006,Hamza Malik,95,96,94,79,83,364,91.0,A,Pass,Excellent,Low Risk
+STU007,Sana Yusuf,64,83,87,62,95,296,74.0,C,Pass,Good,Low Risk
+STU008,Ali Raza,50,65,94,72,80,281,70.25,C,Pass,Good,Low Risk
+STU009,Mariam Nawaz,67,64,63,93,80,287,71.75,C,Pass,Good,Low Risk
+STU010,Usman Tariq,56,60,74,51,81,241,60.25,D,Pass,Needs Improvement,Low Risk
+STU011,Hira Shah,72,93,66,96,71,327,81.75,B,Pass,Excellent,At Risk
+STU012,Zayd Rahman,96,84,84,52,99,316,79.0,C,Pass,Good,Low Risk
+STU013,Amna Iqbal,74,60,85,63,96,282,70.5,C,Pass,Good,Low Risk
+STU014,Mustafa Zaman,90,94,73,81,76,338,84.5,B,Pass,Excellent,Low Risk
+STU015,Nadia Farooq,95,59,52,87,77,293,73.25,C,Pass,Good,Low Risk
+STU016,Saad Hussain,99,73,55,99,77,326,81.5,B,Pass,Excellent,Low Risk
+STU017,Faiza Butt,56,79,67,74,90,276,69.0,D,Pass,Needs Improvement,Low Risk
+STU018,Junaid Akbar,73,65,73,67,76,278,69.5,D,Pass,Needs Improvement,Low Risk
+STU019,Laiba Sheikh,92,72,94,88,90,346,86.5,B,Pass,Excellent,Low Risk
+STU020,Omer Hashmi,54,93,90,55,87,292,73.0,C,Pass,Good,Low Risk
+STU021,Mahnoor Chaudhry,96,70,60,74,82,300,75.0,C,Pass,Good,Low Risk
+STU022,Haris Gillani,67,95,94,80,77,336,84.0,B,Pass,Excellent,Low Risk
+STU023,Rimsha Abbasi,93,75,53,59,96,280,70.0,C,Pass,Good,Low Risk
+STU024,Asad Qureshi,52,75,75,62,72,264,66.0,D,Pass,Needs Improvement,At Risk
+STU025,Zoya Ansari,63,91,95,65,76,314,78.5,C,Pass,Good,Low Risk
+STU026,Fahad Lodhi,91,86,75,86,84,338,84.5,B,Pass,Excellent,Low Risk
+STU027,Kiran Javed,59,71,58,60,93,248,62.0,D,Pass,Needs Improvement,Low Risk
+STU028,Wajid Ali,85,89,66,92,88,332,83.0,B,Pass,Excellent,Low Risk
+STU029,Sarah Saleem,77,92,75,68,77,312,78.0,C,Pass,Good,Low Risk
+STU030,Nabeel Rizvi,58,87,81,50,94,276,69.0,D,Pass,Needs Improvement,Low Risk
+STU031,Eshal Kazim,53,62,59,85,75,259,64.75,D,Pass,Needs Improvement,Low Risk
+STU032,Taimoor Khan,100,98,77,83,72,358,89.5,B,Pass,Excellent,At Risk
+STU033,Anum Jahangir,74,79,88,74,86,315,78.75,C,Pass,Good,Low Risk
+STU034,Daniyal Aziz,66,90,50,88,93,294,73.5,C,Pass,Good,Low Risk
+STU035,Bushra Zaidi,57,98,84,93,78,332,83.0,B,Pass,Excellent,Low Risk

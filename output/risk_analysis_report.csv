@@ -1,0 +1,36 @@
+Student_ID,Name,Average,Attendance (%),Grade,Performance,Risk
+STU001,Mohammad Ahmed,73.75,78,C,Good,Low Risk
+STU002,Ayesha Khan,71.0,73,C,Good,At Risk
+STU003,Zainab Fatima,79.75,83,C,Good,Low Risk
+STU004,Bilal Siddiqui,55.25,77,F,Needs Improvement,At Risk
+STU005,Khadija Omar,76.5,76,C,Good,Low Risk
+STU006,Hamza Malik,91.0,83,A,Excellent,Low Risk
+STU007,Sana Yusuf,74.0,95,C,Good,Low Risk
+STU008,Ali Raza,70.25,80,C,Good,Low Risk
+STU009,Mariam Nawaz,71.75,80,C,Good,Low Risk
+STU010,Usman Tariq,60.25,81,D,Needs Improvement,Low Risk
+STU011,Hira Shah,81.75,71,B,Excellent,At Risk
+STU012,Zayd Rahman,79.0,99,C,Good,Low Risk
+STU013,Amna Iqbal,70.5,96,C,Good,Low Risk
+STU014,Mustafa Zaman,84.5,76,B,Excellent,Low Risk
+STU015,Nadia Farooq,73.25,77,C,Good,Low Risk
+STU016,Saad Hussain,81.5,77,B,Excellent,Low Risk
+STU017,Faiza Butt,69.0,90,D,Needs Improvement,Low Risk
+STU018,Junaid Akbar,69.5,76,D,Needs Improvement,Low Risk
+STU019,Laiba Sheikh,86.5,90,B,Excellent,Low Risk
+STU020,Omer Hashmi,73.0,87,C,Good,Low Risk
+STU021,Mahnoor Chaudhry,75.0,82,C,Good,Low Risk
+STU022,Haris Gillani,84.0,77,B,Excellent,Low Risk
+STU023,Rimsha Abbasi,70.0,96,C,Good,Low Risk
+STU024,Asad Qureshi,66.0,72,D,Needs Improvement,At Risk
+STU025,Zoya Ansari,78.5,76,C,Good,Low Risk
+STU026,Fahad Lodhi,84.5,84,B,Excellent,Low Risk
+STU027,Kiran Javed,62.0,93,D,Needs Improvement,Low Risk
+STU028,Wajid Ali,83.0,88,B,Excellent,Low Risk
+STU029,Sarah Saleem,78.0,77,C,Good,Low Risk
+STU030,Nabeel Rizvi,69.0,94,D,Needs Improvement,Low Risk
+STU031,Eshal Kazim,64.75,75,D,Needs Improvement,Low Risk
+STU032,Taimoor Khan,89.5,72,B,Excellent,At Risk
+STU033,Anum Jahangir,78.75,86,C,Good,Low Risk
+STU034,Daniyal Aziz,73.5,93,C,Good,Low Risk
+STU035,Bushra Zaidi,83.0,78,B,Excellent,Low Risk

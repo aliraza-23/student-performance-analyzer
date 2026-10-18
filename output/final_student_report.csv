@@ -1,0 +1,36 @@
+Student_ID,Name,Total Marks,Average,Grade,Status,Performance,Risk
+STU001,Mohammad Ahmed,295,73.75,C,Pass,Good,Low Risk
+STU002,Ayesha Khan,284,71.0,C,Pass,Good,At Risk
+STU003,Zainab Fatima,319,79.75,C,Pass,Good,Low Risk
+STU004,Bilal Siddiqui,221,55.25,F,Pass,Needs Improvement,At Risk
+STU005,Khadija Omar,306,76.5,C,Pass,Good,Low Risk
+STU006,Hamza Malik,364,91.0,A,Pass,Excellent,Low Risk
+STU007,Sana Yusuf,296,74.0,C,Pass,Good,Low Risk
+STU008,Ali Raza,281,70.25,C,Pass,Good,Low Risk
+STU009,Mariam Nawaz,287,71.75,C,Pass,Good,Low Risk
+STU010,Usman Tariq,241,60.25,D,Pass,Needs Improvement,Low Risk
+STU011,Hira Shah,327,81.75,B,Pass,Excellent,At Risk
+STU012,Zayd Rahman,316,79.0,C,Pass,Good,Low Risk
+STU013,Amna Iqbal,282,70.5,C,Pass,Good,Low Risk
+STU014,Mustafa Zaman,338,84.5,B,Pass,Excellent,Low Risk
+STU015,Nadia Farooq,293,73.25,C,Pass,Good,Low Risk
+STU016,Saad Hussain,326,81.5,B,Pass,Excellent,Low Risk
+STU017,Faiza Butt,276,69.0,D,Pass,Needs Improvement,Low Risk
+STU018,Junaid Akbar,278,69.5,D,Pass,Needs Improvement,Low Risk
+STU019,Laiba Sheikh,346,86.5,B,Pass,Excellent,Low Risk
+STU020,Omer Hashmi,292,73.0,C,Pass,Good,Low Risk
+STU021,Mahnoor Chaudhry,300,75.0,C,Pass,Good,Low Risk
+STU022,Haris Gillani,336,84.0,B,Pass,Excellent,Low Risk
+STU023,Rimsha Abbasi,280,70.0,C,Pass,Good,Low Risk
+STU024,Asad Qureshi,264,66.0,D,Pass,Needs Improvement,At Risk
+STU025,Zoya Ansari,314,78.5,C,Pass,Good,Low Risk
+STU026,Fahad Lodhi,338,84.5,B,Pass,Excellent,Low Risk
+STU027,Kiran Javed,248,62.0,D,Pass,Needs Improvement,Low Risk
+STU028,Wajid Ali,332,83.0,B,Pass,Excellent,Low Risk
+STU029,Sarah Saleem,312,78.0,C,Pass,Good,Low Risk
+STU030,Nabeel Rizvi,276,69.0,D,Pass,Needs Improvement,Low Risk
+STU031,Eshal Kazim,259,64.75,D,Pass,Needs Improvement,Low Risk
+STU032,Taimoor Khan,358,89.5,B,Pass,Excellent,At Risk
+STU033,Anum Jahangir,315,78.75,C,Pass,Good,Low Risk
+STU034,Daniyal Aziz,294,73.5,C,Pass,Good,Low Risk
+STU035,Bushra Zaidi,332,83.0,B,Pass,Excellent,Low Risk
