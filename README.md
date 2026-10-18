@@ -1,122 +1,79 @@
 # 🎓 Student Performance Analyzer
 
-A Python-based **Student Performance Analyzer** that processes student marks and attendance data, calculates academic performance metrics, identifies performance and risk levels, generates visual reports, and provides an interactive **Streamlit web dashboard**.
+A Python-based **Student Performance Analyzer** that analyzes student marks and attendance, calculates academic performance metrics, identifies at-risk students, generates visual reports, and provides an interactive **Streamlit dashboard**.
 
-The project is designed to work with different CSV datasets by automatically detecting student information, attendance, and numeric subject columns instead of relying on fixed subject names.
-
----
+The project supports different CSV datasets by automatically detecting student information, attendance, and numeric subject columns instead of relying on fixed subject names.
 
 ## ✨ Features
 
 ### 📊 Data Analysis
-
-- Load student data from CSV files using Pandas
-- Inspect dataset shape, columns, statistics, missing values, and duplicates
-- Automatically detect:
-  - Student Name
-  - Student ID / Roll Number / Registration Number
-  - Attendance column
-  - Numeric subject columns
-- Support datasets with different subject names and different numbers of subjects
-- Calculate:
-  - Total marks
-  - Average marks
-  - Highest and lowest averages
-  - Subject-wise averages
-  - Subject-wise highest and lowest marks
-  - Standard deviation
-  - Strongest and weakest subjects
+- Load and analyze student data from CSV files using Pandas.
+- Inspect dataset dimensions, columns, statistics, missing values, and duplicates.
+- Automatically detect student names, IDs/roll numbers, attendance, and numeric subject columns.
+- Support different subject names and different numbers of subjects.
+- Calculate total marks, average marks, subject averages, highest/lowest marks, and standard deviation.
 
 ### 🎓 Academic Performance
-
-- Automatic grade calculation
-- Pass / Fail classification
-- Performance categories:
-  - Excellent
-  - Good
-  - Needs Improvement
-- Top-performing students
-- Student consistency analysis
+- Calculate grades automatically.
+- Classify students as Pass or Fail.
+- Categorize performance as Excellent, Good, or Needs Improvement.
+- Identify top-performing students.
+- Analyze student consistency.
 
 ### 📅 Attendance Analysis
-
 When an attendance column is available, the analyzer can calculate:
+- Average attendance.
+- Attendance-versus-performance correlation.
+- Students with low attendance.
+- Attendance-based risk classifications.
 
-- Average attendance
-- Attendance vs. performance correlation
-- Students with low attendance
-- Attendance-based risk classification
-
-If attendance is not present, attendance-specific analysis is skipped automatically.
+If attendance data is unavailable, attendance-specific analysis is skipped.
 
 ### ⚠️ Risk Analysis
-
 Students are classified into:
-
 - 🟢 Low Risk
 - 🟡 Medium Risk
 - 🔴 High Risk
 
-Risk analysis considers academic performance and, when available, attendance.
+Risk classification considers academic performance and, when available, attendance.
 
 ### 📈 Visualizations
+The project can generate charts for:
+- Student average performance.
+- Subject-wise average performance.
+- Grade and performance-category distributions.
+- Attendance versus performance.
+- Student risk distribution and risk percentages.
+- Top-performing students.
 
-The project generates charts for:
-
-- Student average performance
-- Subject-wise average performance
-- Grade distribution
-- Performance category distribution
-- Attendance vs. performance
-- Student risk distribution
-- Risk percentage distribution
-- Top-performing students
-
-### 🌐 Streamlit Web Application
-
-The project also includes an interactive web interface with:
-
-- CSV upload
-- Automatic column detection
-- Automatic subject detection
-- Dashboard metrics
-- Student performance table
-- Student search
-- Grade filtering
-- Risk filtering
-- Individual student analysis
-- Subject statistics
-- Attendance correlation
-- Risk analysis
-- Downloadable analyzed CSV
-- Downloadable text report
-
----
+### 🌐 Streamlit Dashboard
+- Upload a CSV dataset.
+- Detect student and subject columns automatically.
+- View dashboard metrics and student performance tables.
+- Search students and filter by grade or risk.
+- Explore individual student analysis and subject statistics.
+- Review attendance correlation and risk analysis.
+- Download analyzed CSV data and a text report.
 
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
 |---|---|
 | Python | Core programming language |
-| Pandas | Data loading, cleaning, transformation, and analysis |
+| Pandas | Data loading, cleaning, and analysis |
 | NumPy | Numerical calculations and statistics |
 | Matplotlib | Data visualization |
-| Streamlit | Interactive web application |
-
----
+| Streamlit | Interactive web dashboard |
 
 ## 📁 Project Structure
 
 ```text
-Student Performance Analyzer/
-│
+student-performance-analyzer/
 ├── data/
 │   └── students-sample-dataset.csv
-│
 ├── src/
 │   ├── main.py
 │   └── app.py
-│
 ├── output/
 │   ├── charts/
 │   │   ├── attendance_vs_performance.png
@@ -127,41 +84,35 @@ Student Performance Analyzer/
 │   │   ├── student_risk_distribution.png
 │   │   ├── subject_averages_chart.png
 │   │   └── top_3_students.png
-│   │
 │   ├── complete_analysis_report.csv
 │   ├── final_student_report.csv
 │   ├── risk_analysis_report.csv
 │   ├── student_performance_analyzed.csv
 │   ├── student_performance_dashboard.png
 │   └── subject_statistics.csv
-│
 ├── .gitignore
-└── README.md
+├── README.md
+└── requirements.txt
 ```
 
-> **Note:** A local `.venv/` virtual environment may exist in the development folder. It should not be committed to GitHub. Use `.gitignore` to exclude it.
-
----
+> **Note:** This is an example structure based on the project description. Keep only files and folders that actually exist in your repository. Do not commit your local `.venv/` virtual environment.
 
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
 
+Replace `YOUR-USERNAME` with your GitHub username:
+
 ```bash
 git clone https://github.com/YOUR-USERNAME/student-performance-analyzer.git
-```
-
-Move into the project directory:
-
-```bash
 cd student-performance-analyzer
 ```
 
----
+If the project is already on your computer, open its folder in VS Code and skip this step.
 
 ### 2. Create a Virtual Environment
 
-Windows:
+On Windows PowerShell:
 
 ```powershell
 python -m venv .venv
@@ -170,149 +121,59 @@ python -m venv .venv
 Activate it:
 
 ```powershell
-.venv\Scripts\activate
+.\.venv\Scripts\Activate.ps1
 ```
 
-If PowerShell blocks script execution, you can allow locally created scripts for your current user:
-
-```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
-
-Then activate the environment again:
-
-```powershell
-.venv\Scripts\activate
-```
-
----
+If PowerShell blocks activation, you can either configure the execution policy for your current user or run the commands without activating the environment by using `.venv\Scripts\python`.
 
 ### 3. Install Dependencies
 
-Install the required packages:
-
-```bash
-pip install pandas numpy matplotlib streamlit
-```
-
-If the repository contains a `requirements.txt` file, you can instead use:
+If `requirements.txt` exists:
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
+Otherwise, install the listed packages:
 
-# 💻 Running the Python Analyzer
-
-The command-line/data-analysis version is located at:
-
-```text
-src/main.py
+```bash
+pip install pandas numpy matplotlib streamlit
 ```
 
-Run it from the project root:
+### 4. Run the Command-Line Analyzer
+
+From the project root:
 
 ```bash
 python src/main.py
 ```
 
-The analyzer reads the sample dataset from:
+The analyzer reads the sample dataset from `data/students-sample-dataset.csv` and, according to the project configuration, writes analysis files and charts to `output/`.
 
-```text
-data/students-sample-dataset.csv
-```
-
-and generates analysis files and charts in:
-
-```text
-output/
-```
-
----
-
-# 🌐 Running the Web Application
-
-The Streamlit application is located at:
-
-```text
-src/app.py
-```
-
-Start the application with:
+### 5. Run the Streamlit Dashboard
 
 ```bash
 streamlit run src/app.py
 ```
 
-Streamlit will provide a local URL, typically:
+Open the local URL printed in the terminal, usually:
 
 ```text
 http://localhost:8501
 ```
 
-Open that address in your browser.
-
----
-
 ## 📤 Using the Web App
 
-### Step 1 — Start the application
+1. Start the app with `streamlit run src/app.py`.
+2. Upload a student CSV file using the sidebar.
+3. Let the app detect student IDs, names, attendance, and numeric subject columns.
+4. Review averages, total marks, grades, pass/fail status, performance, and risk.
+5. Explore the Dashboard, Students, Analytics, Risk Analysis, and Reports sections if present in your app.
+6. Download the available analysis files.
 
-```bash
-streamlit run src/app.py
-```
+## 📄 CSV Dataset Format
 
-### Step 2 — Upload a CSV
-
-Use the **Upload Student CSV** control in the sidebar.
-
-### Step 3 — Automatic Detection
-
-The application detects:
-
-- Student ID
-- Student Name
-- Attendance
-- Numeric subject columns
-
-### Step 4 — Analyze
-
-The dashboard calculates:
-
-- Average
-- Total Marks
-- Grade
-- Pass/Fail
-- Performance
-- Risk
-
-### Step 5 — Explore
-
-Use the dashboard tabs:
-
-```text
-📊 Dashboard
-👨‍🎓 Students
-📈 Analytics
-⚠️ Risk Analysis
-📋 Reports
-```
-
-### Step 6 — Download
-
-Download:
-
-- Analyzed CSV
-- Performance report
-
----
-
-# 📄 CSV Dataset Format
-
-The application is designed to support different subject names and different numbers of numeric subject columns.
-
-A sample dataset looks like:
+A CSV file may look like this:
 
 ```csv
 Student_ID,Name,Math,Programming,Database,DSA,Attendance (%)
@@ -321,91 +182,35 @@ STU002,Ayesha Khan,65,69,58,92,73
 STU003,Zainab Fatima,93,89,55,82,83
 ```
 
-The subject names do **not** need to be exactly:
+Subject names do not need to be exactly `Math`, `Programming`, `Database`, or `DSA`. The analyzer is designed to detect numeric subject columns dynamically.
+
+For example, another dataset might use subjects such as `Programming Fundamentals`, `Calculus`, `Functional English`, `Islamic Studies`, `Information & Communication Technology`, and `Applied Physics`.
+
+## 🔍 Automatic Column Detection
+
+The analyzer looks for common column-name variations.
+
+| Data type | Examples |
+|---|---|
+| Student name | `Name`, `Student_Name`, `Full_Name`, `Learner_Name` |
+| Student ID | `Student_ID`, `ID`, `Roll_No`, `Roll_Number`, `Registration_No`, `Student_Number` |
+| Attendance | Any column containing `attendance` |
+| Subject marks | Numeric columns not identified as student IDs or attendance |
+
+Detection depends on the implementation in `src/main.py` and `src/app.py`. Check those files if a column is classified incorrectly.
+
+## 🧮 Analysis Logic
+
+### Average and Total Marks
 
 ```text
-Math
-Programming
-Database
-DSA
+Average = mean of all detected subject marks
+Total Marks = sum of all detected subject marks
 ```
 
-For example, a dataset can contain:
+### Grade Boundaries
 
-```csv
-Student_ID,Name,Programming Fundamentals,Calculus,Functional English,Islamic Studies,Information & Communication Technology,Applied Physics,Attendance (%)
-```
-
-The application detects numeric subject columns automatically.
-
----
-
-# 🔍 Automatic Column Detection
-
-The analyzer looks for common variations of student information.
-
-### Student Name
-
-Examples:
-
-```text
-Name
-Student_Name
-Full_Name
-Student
-Learner_Name
-```
-
-### Student ID
-
-Examples:
-
-```text
-Student_ID
-ID
-Roll_No
-Roll_Number
-Registration_No
-Registration_Number
-Roll
-Student_Number
-```
-
-### Attendance
-
-Any column containing:
-
-```text
-attendance
-```
-
-is considered an attendance column.
-
-### Subjects
-
-Numeric columns that are not identified as ID or attendance columns are treated as subject columns.
-
----
-
-# 🧮 Analysis Logic
-
-## Average
-
-For each student:
-
-```text
-Average = mean(all detected subject marks)
-```
-
-## Total Marks
-
-```text
-Total Marks = sum(all detected subject marks)
-```
-
-## Grades
-
-The current grading logic in the application is:
+The current grading rules described for this project are:
 
 | Average | Grade |
 |---:|:---:|
@@ -416,158 +221,98 @@ The current grading logic in the application is:
 | 50–59.99 | D |
 | Below 50 | F |
 
-## Pass / Fail
+### Pass / Fail
 
 ```text
-Average >= 50 → Pass
-Average < 50  → Fail
+Average >= 50  → Pass
+Average < 50   → Fail
 ```
 
-## Risk
+### Risk Classification
 
 When attendance is available:
 
 ```text
-High Risk:
-    Average < 50 OR Attendance < 60
-
-Medium Risk:
-    Average < 60 OR Attendance < 75
-
-Low Risk:
-    Otherwise
+High Risk:   Average < 50 OR Attendance < 60
+Medium Risk: Average < 60 OR Attendance < 75
+Low Risk:    Otherwise
 ```
 
 When attendance is unavailable, risk is based on average performance.
 
-> These thresholds are implemented as project rules and can be modified in `src/app.py` or `src/main.py`.
+> These are project-specific thresholds, not universal academic standards. The rules can be changed in `src/app.py` or `src/main.py`, depending on where they are implemented. Verify the code if you have changed the logic.
 
----
+## 📊 Output Files
 
-# 📊 Output Files
+The analysis workflow may generate the following files in `output/`:
 
-The analysis version generates CSV reports such as:
+| File | Description |
+|---|---|
+| `student_performance_analyzed.csv` | Original student data plus calculated analysis fields |
+| `final_student_report.csv` | Student-level performance summary |
+| `complete_analysis_report.csv` | Broader analysis including marks, averages, grades, status, performance, and risk |
+| `risk_analysis_report.csv` | Student risk information |
+| `subject_statistics.csv` | Subject-level statistical information |
+| `student_performance_dashboard.png` | Dashboard visualization |
+| `charts/` | Generated chart images |
 
-### `student_performance_analyzed.csv`
+Actual output files depend on the workflow and configuration in your code.
 
-Contains the original student data together with calculated analysis fields.
-
-### `final_student_report.csv`
-
-Contains the final student-level performance summary.
-
-### `complete_analysis_report.csv`
-
-Contains the broader analysis results, including marks, averages, grades, status, performance, and risk.
-
-### `risk_analysis_report.csv`
-
-Contains risk-related student information.
-
-### `subject_statistics.csv`
-
-Contains subject-level statistical information.
-
-### Dashboard and Charts
-
-The `output/charts/` directory contains generated visualizations, while:
-
-```text
-output/student_performance_dashboard.png
-```
-
-contains the dashboard visualization generated by the analysis workflow.
-
----
-
-# 🧪 Example Workflow
+## 🔄 Project Workflow
 
 ```text
 CSV Dataset
-     │
-     ▼
+    ↓
 Load Data with Pandas
-     │
-     ▼
-Detect Student / ID / Attendance
-     │
-     ▼
-Detect Numeric Subjects
-     │
-     ▼
-Clean & Prepare Data
-     │
-     ▼
-Calculate Total & Average
-     │
-     ▼
-Calculate Grade & Pass/Fail
-     │
-     ▼
-Performance Analysis
-     │
-     ├── Subject Statistics
-     ├── Top Students
-     ├── Consistency
-     ├── Attendance Analysis
-     └── Risk Analysis
-     │
-     ▼
-Charts & Reports
-     │
-     ▼
-Streamlit Dashboard
+    ↓
+Detect Student / ID / Attendance Columns
+    ↓
+Detect Numeric Subject Columns
+    ↓
+Clean and Prepare Data
+    ↓
+Calculate Total Marks and Average
+    ↓
+Calculate Grade and Pass/Fail
+    ↓
+Analyze Performance and Risk
+    ↓
+Generate Charts and Reports
+    ↓
+Explore Results in Streamlit Dashboard
 ```
 
----
+## 🎯 Learning Objectives
 
-# 🎯 Project Goals
+This project demonstrates:
+- Python programming.
+- Pandas and NumPy data processing.
+- Matplotlib visualizations.
+- CSV file handling and data cleaning.
+- Dynamic column detection.
+- Statistical analysis and conditional logic.
+- Report generation.
+- Streamlit application development.
 
-This project was developed to practice and demonstrate:
+## 🔮 Future Improvements
 
-- Python programming
-- Pandas data analysis
-- NumPy numerical operations
-- Matplotlib visualization
-- CSV data processing
-- Dynamic dataset handling
-- Data cleaning
-- Statistical analysis
-- Conditional logic
-- Report generation
-- Streamlit web application development
+Possible extensions include:
+- Interactive Plotly charts.
+- Configurable grading and pass-mark rules.
+- Configurable risk thresholds.
+- Comparison of multiple datasets.
+- Teacher/admin authentication.
+- Student profile pages.
+- Database integration.
+- PDF report generation and Excel export.
+- Cloud deployment and responsive UI improvements.
 
----
+## 🔐 Git and GitHub Safety
 
-# 🔮 Possible Future Improvements
-
-Potential extensions include:
-
-- Interactive Plotly charts
-- More flexible grading systems
-- Configurable pass marks
-- Configurable risk thresholds
-- Multiple dataset comparison
-- Teacher/admin authentication
-- Student profile pages
-- Database integration
-- PDF report generation
-- Excel report export
-- More advanced statistical analysis
-- Cloud deployment
-- Responsive UI improvements
-- Persistent storage for uploaded datasets
-
----
-
-# ⚠️ Important GitHub Note
-
-Do **not** upload the local virtual environment to GitHub.
-
-Add this to `.gitignore`:
+Do not commit your local virtual environment, Python cache files, editor settings, or secrets. A `.gitignore` file can include:
 
 ```gitignore
-# Virtual environment
+# Virtual environments
 .venv/
 venv/
 
@@ -575,56 +320,39 @@ venv/
 __pycache__/
 *.py[cod]
 
-# Streamlit
+# Streamlit secrets
 .streamlit/secrets.toml
 
-# IDE files
+# Editor settings
 .vscode/
 .idea/
 
-# OS files
+# Operating system files
 .DS_Store
 Thumbs.db
 ```
 
-The virtual environment can always be recreated using:
+Keep any real API keys, passwords, or private credentials out of GitHub.
 
-```bash
-python -m venv .venv
-```
-
-and the required packages can be installed again.
-
----
-
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 **Ali**
 
-Student Performance Analyzer — a Python data analysis and Streamlit dashboard project.
+Student Performance Analyzer — a Python data-analysis and Streamlit dashboard project.
 
----
+## 📜 License
 
-# 📜 License
+No specific license is stated here. If you want others to reuse and modify the project, choose a license and add its terms in a separate `LICENSE` file.
 
-This project can be distributed and modified according to the license you choose for your GitHub repository.
+## ⭐ Support
 
-For an open-source repository, consider adding an appropriate license such as the **MIT License** in a separate `LICENSE` file.
-
----
-
-## ⭐ If You Find This Project Useful
-
-Feel free to:
-
-- ⭐ Star the repository
-- 🍴 Fork the project
-- 🐛 Report issues
-- 💡 Suggest improvements
-- 🔧 Submit pull requests
+If you find this project useful, you can:
+- Star the repository.
+- Fork it.
+- Report issues.
+- Suggest improvements.
+- Submit pull requests.
 
 ---
 
 **Built with Python 🐍, Pandas 🐼, NumPy 🔢, Matplotlib 📊, and Streamlit 🌐**
-#   s t u d e n t - p e r f o r m a n c e - a n a l y z e r  
- 
